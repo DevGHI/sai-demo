@@ -20,7 +20,7 @@ class PositionFactory extends Factory
         return [
             'name' => $this->faker->name,
             'salary' => $this->faker->numberBetween(1000, 10000),
-            'department_id' => rand(1, Department::count()),
+            'department_id' => Department::factory(),
         ];
     }
 }

@@ -24,8 +24,10 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // Department::factory(2)->has(Position::factory()->count(3))->create();
-        Department::factory(10)->create();
-        Position::factory(100)->create();
+        Department::factory(10)
+        ->has(Position::factory()->count(3))
+        ->create();
+        // Position::factory(100)->create();
         // Department::factory(2)
         // ->hasPositions(3)
         // ->create();
